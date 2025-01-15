@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+html {
+    height: 100%;
+    /* background: linear-gradient(90deg, #d3eef4, #f1eec8); */
+    background-attachment: fixed;
+  }
+  body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    /* background: linear-gradient(90deg, #d3eef4, #f1eec8); */
+    background-color: rgb(218, 226, 234);
+    background-attachment: fixed; /* Prevents background movement */
+    background-size: cover; /* Ensures the gradient fills the viewport */
+    padding-top: 10px;
+  }
+  
+  
+.nav {
+    display: flex;
+    position: fixed;
+    justify-content: space-between; /* Space between the logo and links */
+    align-items: center; /* Vertically center items */
+    padding: 10px 20px;
+    /* background-color: #12243F; Dark navy background color */
+    /* color: white; */
+    box-shadow: 0 10px 20px -5px rgba(173, 216, 230, 0.8);
+    /* position: relative; */
+    width: 100%;
+    margin-top: 10px;
+    
+    
+  }
+  
+  /* Logo styles */
+  .Logo {
+    font-size: 1.6rem;
+    margin: 0;
+    color: #9324e8; /* Mint green color for the logo */
+    position: relative;
+     left: 20px; /*Keep the logo in the left corner */
+    margin-bottom: 5px;
+
+  }
+  
+  /* Navigation links container */
+  .links {
+    display: flex;
+    gap: 30px; /* Space between links */
+    margin: 0 auto; /* Center the links container */
+    margin-bottom: 5px;
+  }
+  
+  /* Navigation links styles */
+  .links a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    font-weight: bolder;
+  }
+  
+  /* Hover effect for links */
+  .links a:hover {
+    color: #063270; /* Highlight color for hover */
+  }
+  
+  .name{
+    margin-top: 100px;
+    margin-left: 40px;
+    /* margin-right: 600px; */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items */
+    justify-content: space-between;
+  }
+  .nameunder{
+    margin-left: 40px;
+    /* margin-right: 10px; */
+  }
+  @keyframes textGradient {
+    0% {
+      color: black; /* Start with black */
+    }
+    50% {
+      color: #b80ad7; /* Transition to first gradient color */
+    }
+    75% {
+      color: #3030d9; /* Transition to second gradient color */
+    }
+    100% {
+      color: black; /* Return to black */
+    }
+  }
+  .sudha{
+    font-size: 3.5rem;
+    color: black; /* Initial color */
+    animation: textGradient 5s infinite;
+    line-height: 1.5;
+    
+  }
+  .namedis{
+    color: #083e8f;
+  }
+  .abt{
+    font-weight: lighter;
+    line-height: 2.3cap;
+    font-size: 2rem;
+  }
+  .blue-text {
+    color: #092c79; /* Blue color */
+}
+.mypic {
+    border-radius: 50%; /* Makes the image circular */
+    width: 250px; /* Adjust width */
+    height: 250px; /* Adjust height */
+    object-fit: cover; /* Maintains proper aspect ratio within the circular frame */
+    margin-left: 300px; 
+    margin-right: 150px;
+    
+}
+.socialmedia{
+    display: flex;
+    justify-content: flex-start;
+    padding: 30px 80px;
+    
+}
+.sc{
+    margin-right: 20px;
+    color: gray;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+i{
+    /* padding: 10px; */
+    margin-left: 8px;
+}
+a{
+    text-decoration: none;
+
+}
+.About p {
+    font-size: larger;
+    margin-left: 500px;
+    line-height: 3cap;
+    margin-right: 30px;
+}
+.heading{
+    margin-bottom: 10px;
+    text-align: center;
+}
