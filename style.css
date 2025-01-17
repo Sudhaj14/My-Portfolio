@@ -234,3 +234,80 @@ a{
     background-color: #085F20;
     transform: scale(1.05);
 }
+.skills {
+  text-align: center;
+  padding: 50px 0;
+  /* background: linear-gradient(45deg, #ff6b6b, #6b6bff, #48c9b0, #f9ca24); */
+  background-size: 400% 400%;
+  animation: bgAnimation 10s infinite alternate;
+}
+
+/* Background Animation */
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.skills-heading h1 {
+  font-size: 2rem;
+  /* color: white; */
+  margin-bottom: 50px;
+}
+
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 200px;  /* Adjusted instead of margin-left & margin-right */
+  margin-bottom: 100px;
+}
+
+/* Icon Box */
+.icon {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.9s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 3px solid #3f3f5e; /* Border added */
+  border-radius: 10px; /* Rounded edges */
+}
+
+/* Image Inside Icon */
+.icon img {
+  width: 80%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+/* Hover Effect */
+.icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating Animation - Alternating */
+.icon:nth-child(odd) {
+  animation: floatUp 3s ease-in-out infinite;
+}
+
+.icon:nth-child(even) {
+  animation: floatDown 3s ease-in-out infinite;
+}
+
+/* Float Up */
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Float Down */
+@keyframes floatDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
