@@ -6,10 +6,12 @@
     <title>Sudha Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
-    
+
+    <!-- Navigation Bar -->
     <div class="nav">
         <div>
             <h1 class="Logo">JS</h1>
@@ -19,9 +21,11 @@
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
-            <a href="#resume">Resume</a>
+            <a href="https://drive.google.com/file/d/1FFXAUa5Yr2Y1AI_AFb-RY4XIdPkmRr-l/view?usp=sharing" target="_blank" >Resume</a>
         </div>
     </div>
+
+    <!-- Hero Section -->
     <div class="name">
         <div class="nameunder">
             <h2 class="namedis">Hi, my name is</h2>
@@ -31,23 +35,27 @@
                 <span class="blue-text">Full Stack Developer</span> with a focus on intuitive design and seamless functionality.
             </h2>
         </div>
-        <img class="mypic" src="Images/Sudha1.jpg" alt="myimage">
+        <div class="image-container">
+            <img id="mypic" class="mypic" src="Images/Sudha1.jpg" alt="My Image">
+        </div>
     </div>
+
+    <!-- Social Media Links -->
     <div class="socialmedia">
-        <a href="https://www.linkedin.com/in/sudha-j14/"><h4 class="sc">Linkedln<i class="fa-brands fa-linkedin"></i></h4></a>
-        <a href="https://github.com/Sudhaj14"> <h4 class="sc">Github<i class="fa-brands fa-github"></i></h4></a>
-        <a href="sudhachithra123@gmail.com"><h4 class="sc">Mail<i class="fa-solid fa-envelope"></i></h4></a>
+        <a href="https://www.linkedin.com/in/sudha-j14/" target="_blank" ><h4 class="sc">LinkedIn <i class="fa-brands fa-linkedin"></i></h4></a>
+        <a href="https://github.com/Sudhaj14" target="_blank" > <h4 class="sc">GitHub <i class="fa-brands fa-github"></i></h4></a>
+        <a href="mailto:sudhachithra123@gmail.com" target="_blank" ><h4 class="sc">Mail <i class="fa-solid fa-envelope"></i></h4></a>
     </div>
-    
-    <div class="About">
+
+    <!-- About Section -->
+    <div id="about" class="About">
         <div class="heading">
-            <h1>About me</h1>
+            <h1>About Me</h1>
             <h3>Wanna hire me?</h3>
         </div>
         <div class="about-content">
             <div class="about-image">
                 <img src="Images/sudha4.jpg" alt="About Me">
-                <!-- <h2 class="title">Creative Thinker & Developer</h2> -->
             </div>
             <div class="about-text">
                 <p>
@@ -58,48 +66,168 @@
                 </p>
                 <div class="about-buttons">
                     <a href="#" class="btn btn-hire">Hire Me</a>
-                    <a href="path-to-resume.pdf" target="_blank" class="btn btn-resume">Get Resume</a>
+                    <a href="https://drive.google.com/file/d/1FFXAUa5Yr2Y1AI_AFb-RY4XIdPkmRr-l/view?usp=sharing" target="_blank" class="btn btn-resume">Get Resume</a>
                 </div>
             </div>
-            
         </div>
-        
     </div>
-    <section class="skills">
-      <div class="skills-heading">
-        <h1>Technologies</h1>
-      </div>
-      <div class="skills-icons">
-        <div class="icon"><img src="Images/C.png" alt="C"></div>
-        <div class="icon"><img src="Images/C++ (CPlusPlus).png" alt="C++"></div>
-        <div class="icon"><img src="Images/Java.png" alt="Java"></div>
-        <div class="icon"><img src="Images/JavaScript.png" alt="JavaScript"></div>
-        <div class="icon"><img src="Images/html-5.png" alt="HTML"></div>
-        <div class="icon"><img src="Images/css-3.png" alt="CSS"></div>
-        <div class="icon"><img src="Images/python.png" alt="Python"></div>
-        <div class="icon"><img src="Images/mysql.png" alt="MySQL"></div>
-        <div class="icon"><img src="Images/mongodb_original_logo_icon_146424.webp" alt="MongoDB"></div>
-        <div class="icon"><img src="Images/atom.png" alt="Atom"></div>
-        <div class="icon"><img src="Images/database-storage.png" alt="Database"></div>
-      </div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="skills-heading">
+            <h1>Technologies</h1>
+        </div>
+        <div class="skills-icons">
+            <div class="icon"><img src="Images/C.png" alt="C"></div>
+            <div class="icon"><img src="Images/C++ (CPlusPlus).png" alt="C++"></div>
+            <div class="icon"><img src="Images/Java.png" alt="Java"></div>
+            <div class="icon"><img src="Images/JavaScript.png" alt="JavaScript"></div>
+            <div class="icon"><img src="Images/html-5.png" alt="HTML"></div>
+            <div class="icon"><img src="Images/css-3.png" alt="CSS"></div>
+            <div class="icon"><img src="Images/python.png" alt="Python"></div>
+            <div class="icon"><img src="Images/mysql.png" alt="MySQL"></div>
+            <div class="icon"><img src="Images/mongodb_original_logo_icon_146424.webp" alt="MongoDB"></div>
+            <div class="icon"><img src="Images/atom.png" alt="Atom"></div>
+            <div class="icon"><img src="Images/database-storage.png" alt="Database"></div>
+        </div>
     </section>
+
+    <!-- Tools and Platforms Section -->
     <section class="skills">
-      <div class="skills-heading">
-        <h1>Tools and Platforms</h1>
-      </div>
-      <div class="skills-icons">
-        <div class="icon"><img src="Images/logo.png" alt="C"></div>
-        <div class="icon"><img src="Images/chrome.png" alt="C++"></div>
-        <div class="icon"><img src="Images/github.png" alt="Java"></div>
-        <div class="icon"><img src="Images/notion.jpeg" alt="JavaScript"></div>
-        <div class="icon"><img src="Images/social.png" alt="HTML"></div>
-        <div class="icon"><img src="Images/vercel.jpeg" alt="CSS"></div>
-        <div class="icon"><img src="Images/gitlab.png" alt="Python"></div>
-        <div class="icon"><img src="Images/eclipse.jpeg" alt="MySQL"></div>
-        <div class="icon"><img src="Images/figma.png" alt="MongoDB"></div>
-        <div class="icon"><img src="Images/atom.png" alt="Atom"></div>
-        <div class="icon"><img src="Images/database-storage.png" alt="Database"></div>
-      </div>
+        <div class="skills-heading">
+            <h1>Tools and Platforms</h1>
+        </div>
+        <div class="skills-icons">
+            <div class="icon"><img src="Images/logo.png" alt="C"></div>
+            <div class="icon"><img src="Images/chrome.png" alt="Chrome"></div>
+            <div class="icon"><img src="Images/github.png" alt="GitHub"></div>
+            <div class="icon"><img src="Images/notion.jpeg" alt="Notion"></div>
+            <div class="icon"><img src="Images/social.png" alt="Social"></div>
+            <div class="icon"><img src="Images/vercel.jpeg" alt="Vercel"></div>
+            <div class="icon"><img src="Images/gitlab.png" alt="GitLab"></div>
+            <div class="icon"><img src="Images/eclipse.jpeg" alt="Eclipse"></div>
+            <div class="icon"><img src="Images/figma.png" alt="Figma"></div>
+            <div class="icon"><img src="Images/Godot_icon.svg.png" alt="Godot"></div>
+            <div class="icon"><img src="Images/canva.webp" alt="Canva"></div>
+        </div>
     </section>
-    </body>
+    <div class="Projects" id="projects">
+        <h1>Projects</h1>
+    <div class="container">
+        <div class="image-section">
+          <img src="./Images/weatherl.png" alt="Welcome to weatherly">
+        </div>
+        <div class="card-section">
+          <h2>1. Weatherly - Weather Prediction Application</h2>
+          <p>
+            Developed a weather prediction app delivering accurate real-time forecasts with an intuitive design.
+             Enabled location-based weather searches and detailed forecast views. 
+            Gained experience in React components, state management, and Tailwind CSS for responsive design.
+          </p>
+          <div class="tags">
+            <span>React</span>
+            <span>Tailwind CSS</span>
+           
+          </div>
+          <div class="Projectlinks">
+            <a href="https://weather-application-two-rosy.vercel.app/" target="_blank" class="live-site">
+              <i class="fas fa-globe"></i> Live Site
+            </a>
+            <a href="https://github.com/Sudhaj14/Weather-application" target="_blank" class="source-code">
+              <i class="fab fa-github"></i> Source Code
+            </a>
+          </div>
+          
+        </div>
+      </div>
+      <div class="container-reversed">
+        <div class="image-section">
+          <img src="./Images/car.jpeg" alt="Welcome to weatherly">
+        </div>
+        <div class="card-section">
+          <h2>2. AutoEnroll - Vehicle Management System (VMS) </h2>
+          <p>
+            Developed a Vehicle Management System (VMS) module for seamless vehicle registration and deregistration, ensuring accurate and efficient record-keeping. 
+            Utilized Object-Oriented Programming (OOP) principles for a scalable code structure. 
+            Leveraged SQL for efficient database management and data handling.
+          </p>
+          <div class="tags">
+            <span>Java</span>
+            <span> SQL</span>
+          </div>
+          <div class="Projectlinks">
+            
+            <a href="https://github.com/Sudhaj14/AutoEnroll" target="_blank" class="source-code">
+              <i class="fab fa-github"></i> Source Code
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="image-section">
+          <img src="./Images/ecommerce.png" alt="Welcome to weatherly">
+        </div>
+        <div class="card-section">
+          <h2>1. EasyMart - E-commerce Platform </h2>
+          <p>
+            Developed a user-friendly e-commerce platform enabling product browsing, cart management, and checkout. 
+            Focused on enhancing UI/UX design with responsive layouts and interactive JavaScript features. </p>
+          <div class="tags">
+            <span>HTML</span>
+            <span> CSS</span>
+            <span>JavaScript</span>
+           
+          </div>
+          <div class="Projectlinks">
+            <a href="https://weather-application-two-rosy.vercel.app/" target="_blank" class="live-site">
+              <i class="fas fa-globe"></i> Live Site
+            </a>
+            <a href="https://github.com/Sudhaj14/Ecommerce" target="_blank" class="source-code">
+              <i class="fab fa-github"></i> Source Code
+            </a>
+          </div>
+          
+        </div>
+      </div>
+      <div class="container-reversed">
+        <div class="image-section">
+          <img src="./Images/image.png" alt="Welcome to weatherly">
+        </div>
+        <div class="card-section">
+          <h2>4. Essential - Interactive Shell Game </h2>
+          <p>
+            Developed an interactive educational game featuring Shelldon to teach Shell and Shell Scripting through hands-on sessions.
+             Integrated terminal interaction, auto progress saving, and UI design for an immersive experience.
+             Selected for the technical panel roadshow using Godot 4.0 & GDScript.</p>
+          <div class="tags">
+            <span>Godot(4.0)</span>
+            <span> GDScript</span>
+          </div>
+          <div class="Projectlinks">
+            <a href="https://essentails.vercel.app/" target="_blank" class="live-site">
+                <i class="fas fa-globe"></i> Live Site
+              </a>
+            <a href="https://gitlab.com/missing-semester1/base_project" target="_blank" class="source-code">
+              <i class="fab fa-github"></i> Source Code
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="contact" id="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-buttons">
+          <a href="mailto:sudhachithra123@gmail.com" class="contact-button">
+            <span>📧</span> sudhachithra123@gmail.com
+          </a>
+          <a href="https://linkedin.com/in/sudha-j14" class="contact-button" target="_blank">
+            <span>🔗</span> linkedin/sudha-j14
+          </a>
+          <a href="https://github.com/Sudhaj14" class="contact-button" target="_blank">
+            <span>🐱‍💻</span> github/Sudhaj14
+          </a>
+        </div>
+      </div>
+    <script src="script.js"></script>
+</body>
 </html>

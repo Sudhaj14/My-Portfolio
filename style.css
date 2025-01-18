@@ -1,20 +1,38 @@
+/* Add transition to all elements */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-html {
-    height: 100%;
-    /* background: linear-gradient(90deg, #d3eef4, #f1eec8); */
-    background-attachment: fixed;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Popping effect with scaling and moving */
+.pop-in {
+  opacity: 0;
+  transform: translateY(50px) scale(0.8); /* Initially smaller and positioned below */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* This class will be added once the element is in view */
+.pop-in.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1); /* Full size and at the correct position */
+}
+
+
   body {
     margin: 0;
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(90deg, #d3eef4, #f1eec8);
-    /* background-color: rgb(218, 226, 234); */
+    /* background: linear-gradient(90deg, #d3eef4, #f1eec8); */
+    background-color: rgb(218, 226, 234);
     background-attachment: fixed; /* Prevents background movement */
     background-size: cover; /* Ensures the gradient fills the viewport */
     padding-top: 10px;
@@ -119,7 +137,31 @@ html {
     object-fit: cover; /* Maintains proper aspect ratio within the circular frame */
     margin-left: 300px; 
     margin-right: 150px;
+    animation: imageChange 5s infinite alternate , backgroundPulse 5s infinite alternate;
+    /* transition: all 12s ease-in-out; */
     
+}
+@keyframes backgroundPulse {
+  0% {
+      box-shadow: 0 0 10px #0C3A2D;
+  }
+  50% {
+      box-shadow: 0 0 20px #21A07C, 0 0 30px #0C3A2D;
+  }
+  100% {
+      box-shadow: 0 0 10px #0C3A2D;
+  }
+}
+@keyframes imageChange {
+  0% {
+      content: url('Images/Sudha1.jpg');
+  }
+  50% {
+      content: url('Images/me.jpg'); /* Change this to your second image */
+  }
+  100% {
+      content: url('Images/Sudha1.jpg');
+  }
 }
 .socialmedia{
     display: flex;
@@ -169,6 +211,8 @@ a{
   transform: rotate(-10deg);
   margin-left: 150px;
   border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+
 }
 
 /* .about-image .title {
@@ -310,4 +354,270 @@ a{
 @keyframes floatDown {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(10px); }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  gap: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  margin-left: 70px;
+}
+
+.image-section {
+  flex: 1;
+  position: relative;
+  width: 400px;
+
+}
+
+.image-section img {
+  max-width: 70%;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(34, 32, 32, 0.2);
+  display: block;
+  filter: brightness(0.7) contrast(1.2) sepia(1) hue-rotate(100deg) saturate(2); 
+  transition: filter 0.3s ease-in-out;
+}
+
+/* On hover, remove the green overlay */
+.image-section:hover img {
+  filter: brightness(1) contrast(1) sepia(0) hue-rotate(0deg) saturate(1);
+}
+
+
+.card-section {
+  position: absolute;
+  right: 10%; /* Adjusted overlay position */
+  width: 45%; /* Reduced width */
+  background-color: #fff;
+  color: #333;
+  padding: 1.5rem; /* Reduced padding */
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+}
+
+.card-section h2 {
+  font-size: 1.5rem; /* Reduced font size */
+  margin-bottom: 0.8rem;
+}
+
+.card-section p {
+  font-size: 0.9rem; /* Reduced text size */
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem; /* Reduced gap */
+  margin-bottom: 1rem;
+}
+
+.tags span {
+  background-color: #e0e0e0;
+  color: #272121;
+  padding: 0.4rem 0.8rem; /* Reduced padding */
+  border-radius: 4px;
+  font-size: 0.8rem; /* Reduced font size */
+  font-weight:bolder
+
+}
+
+.Projectlinks {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.8rem; /* Reduced gap */
+}
+
+.Projectlinks a {
+  text-decoration: none;
+  font-size: 1rem; /* Reduced font size */
+  color: #0f9b8e;
+  transition: color 0.3s ease;
+  font-weight:bolder
+}
+
+.Projectlinks a:hover {
+  color: #067b63;
+}
+.Projectlinks i {
+  color: black;
+  margin-right: 0.2rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .image-section img {
+    max-width: 90%; /* Slightly increase size for smaller screens */
+  }
+
+  .card-section {
+    position: static;
+    width: 85%;
+  }
+}
+
+.container-reversed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  gap: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  margin-left: 70px;
+  flex-direction: row-reverse; /* Changes the order */
+}
+
+.container-reversed .image-section {
+  flex: 1;
+  position: relative;
+  margin-left: 400px;
+  width: 400px;
+}
+
+.container-reversed .image-section img {
+  max-width: 100%;
+  /* width: 600px; */
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(34, 32, 32, 0.2);
+  display: block;
+  filter: brightness(0.7) contrast(1.2) sepia(1) hue-rotate(100deg) saturate(2); 
+  transition: filter 0.3s ease-in-out;
+}
+
+.container-reversed .image-section:hover img {
+  filter: brightness(1) contrast(1) sepia(0) hue-rotate(0deg) saturate(1);
+}
+
+.container-reversed .card-section {
+  position: absolute;
+  /* left: 0%;  */
+  right: 50%;
+  width: 45%; /* Reduced width */
+  background-color: #fff;
+  color: #333;
+  padding: 1.5rem; /* Reduced padding */
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+}
+
+.container-reversed .card-section h2 {
+  font-size: 1.5rem; /* Reduced font size */
+  margin-bottom: 0.8rem;
+}
+
+.container-reversed .card-section p {
+  font-size: 0.9rem; /* Reduced text size */
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.container-reversed .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem; /* Reduced gap */
+  margin-bottom: 1rem;
+}
+
+.container-reversed .tags span {
+  background-color: #e0e0e0;
+  color: #272121;
+  padding: 0.4rem 0.8rem; /* Reduced padding */
+  border-radius: 4px;
+  font-size: 0.8rem; /* Reduced font size */
+  font-weight: bolder;
+}
+
+.container-reversed .Projectlinks {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.8rem; /* Reduced gap */
+}
+
+.container-reversed .Projectlinks a {
+  text-decoration: none;
+  font-size: 1rem; /* Reduced font size */
+  color: #0f9b8e;
+  transition: color 0.3s ease;
+  font-weight: bolder;
+}
+
+.container-reversed .Projectlinks a:hover {
+  color: #067b63;
+}
+
+.container-reversed .Projectlinks i {
+  color: black;
+  margin-right: 0.2rem;
+  font-size: 1.2rem;
+}
+.Projects h1 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center; /* This centers the content vertically */
+  justify-content: center; /* This centers the content horizontally */
+  width: 100%; /* Make sure the parent container has enough space */
+}
+
+.contact {
+  display: flex;
+  flex-direction: column; /* Stack the content vertically */
+  align-items: center;    /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  height: 100vh;          /* Make the container take full viewport height */
+  text-align: center;
+  padding: 20px;
+}
+.contact h2 {
+  font-size: 2rem;
+  /* margin-bottom: 500px; */
+  color: #2081ae;
+  
+  /* padding-bottom: 300px; */
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.contact-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.contact-button:hover {
+  background: #555;
+}
+
+.contact-button span {
+  font-size: 1.5rem;
 }
